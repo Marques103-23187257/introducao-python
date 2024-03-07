@@ -1,27 +1,46 @@
 class Funcionario:
-    def __init__(self, nome, especializacao):
-        self.nomee = nome
-        self.especializacao = especializacao
+    def __init__(self, nome, especialidade):
+        self.nome = nome
+        self.especialidade = especialidade
 
-    def AgendarConculta(self, paciente, data):
-        self.paciente = paciente
-        self.data = data
-        
+    def AgendarConculta(self):
         print('Consulta agendada')
     
+    def RemarcarConsulta(self):
+        print('Consulta Remarcada')
+    
+    def FazerExame(self, exame):
+        print(f'Realizando exame: {exame}')
+    
 class Medico(Funcionario):
-    def __init__(self, nome, especializacao, crm):
-        super().__init__(nome, especializacao)
+    def __init__(self, nome, especialidade, crm):
+        super().__init__(nome, especialidade)
         self.crm = crm
     
-consultas = []
+    def PrescMedicamento(self, medicamento):
+        print(f'Prescrição medica: {medicamento}' )
+
+class Enfermeira(Funcionario):
+    def __init__(self, nome, especialidade, coren):
+        super().__init__(nome, especialidade)
+        self.coren = coren
+
+    def AplicaInjecao(self, medicamento):
+        print(f'Aplicando injeção: {medicamento}')
+
+        
+
+
     
-funcionario_1 = Funcionario(nome='Gabriel', especializacao='Gerente')
-# funcionario_1.AgendarConculta(paciente='Fernando', data='XX/XX/XXXX XX:XX')
+    
+    
+funcionario_1 = Funcionario(nome='Antony', especialidade='Recepcionista')
+funcionario_1.AgendarConculta()
 
-medico_1 = Medico(nome='Glauber', especializacao='Clinica', crm='xxxxxxxxxxx')
+funcionario_2 = Funcionario(nome='Gleisy', especialidade='auxiliar')
 
-print(medico_1.nomee)
+medico_1 = Medico(nome='Gabriel', especialidade='Medico Psiquiatra', crm='xxxxxxxxxxx')
+
 
 
 
