@@ -60,7 +60,7 @@ class Enfermeira(Funcionario):
         print(f'Aplicando injeção: {medicamento}')
 
 
-# testes
+# Testes
         
 lista_consultas_1 = []
 lista_consultas_2 = []
@@ -71,8 +71,6 @@ funcionario_1.AgendarConculta(paciente='enzo', cpf='01', data='22/04/2024', hora
 
 medico_1 = Medico(nome='Dr. Gabriel', especialidade='Medico Psiquiatra', crm='xxxxxxxxxxx')
 
-
 funcionario_1.ImprimirConsultas(lista_consultas_1)
-
 
 # funcionario_2 = Funcionario(nome='Gleisy', especialidade='auxiliar')
